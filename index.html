@@ -1,45 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <title>Dark Calculator</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dark Blue Algebra Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-  <div class="calculator">
-    <input type="text" id="display" readonly>
+<div class="calculator">
+
+    <h1>my calucalter</h1>
+
+    <div class="display">
+        <div id="expression">0</div>
+        <div id="result">0</div>
+    </div>
 
     <div class="buttons">
-      <button onclick="clearDisplay()">C</button>
-      <button onclick="append('/')">/</button>
-      <button onclick="append('*')">*</button>
-      <button onclick="deleteLast()">⌫</button>
 
-      <button onclick="append('7')">7</button>
-      <button onclick="append('8')">8</button>
-      <button onclick="append('9')">9</button>
-      <button onclick="append('-')">-</button>
+        <button class="blue" onclick="clearAll()">AC</button>
+        <button class="blue" onclick="deleteLast()">⌫</button>
+        <button class="blue" onclick="addValue('(')">(</button>
+        <button class="blue" onclick="addValue(')')">)</button>
 
-      <button onclick="append('4')">4</button>
-      <button onclick="append('5')">5</button>
-      <button onclick="append('6')">6</button>
-      <button onclick="append('+')">+</button>
+        <button onclick="addValue('sin(')">sin</button>
+        <button onclick="addValue('cos(')">cos</button>
+        <button onclick="addValue('tan(')">tan</button>
+        <button class="operator" onclick="addValue('/')">÷</button>
 
-      <button onclick="append('1')">1</button>
-      <button onclick="append('2')">2</button>
-      <button onclick="append('3')">3</button>
-      <button rowspan="2" onclick="calculate()">=</button>
+        <button onclick="addValue('log(')">log</button>
+        <button onclick="addValue('ln(')">ln</button>
+        <button onclick="addValue('sqrt(')">√</button>
+        <button class="operator" onclick="addValue('*')">×</button>
 
-      <button onclick="append('0')">0</button>
-      <button onclick="append('.')">.</button>
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button class="operator" onclick="addValue('-')">−</button>
+
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button class="operator" onclick="addValue('+')">+</button>
+
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button class="equal" onclick="calculate()">=</button>
+
+        <button onclick="addValue('0')" class="zero">0</button>
+        <button onclick="addValue('.')">.</button>
+        <button onclick="addValue('π')">π</button>
+
+        <button class="special" onclick="square()">x²</button>
+        <button class="special" onclick="addValue('**')">xʸ</button>
+        <button class="special" onclick="addValue('%')">%</button>
+        <button class="special" onclick="addValue('Math.E')">e</button>
+
     </div>
-  </div>
 
-  <script src="script.js"></script>
+</div>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
